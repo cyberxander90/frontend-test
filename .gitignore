@@ -1,2 +1,7 @@
 .DS_Store
 backend/node_modules
+.idea
+frontend/.tmp/
+frontend/coverage/
+frontend/dist/
+frontend/node_modules/
