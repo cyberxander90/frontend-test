@@ -7,6 +7,7 @@ import { HighlightEventsComponent } from './highlight-events/highlight-events.co
 import { DetailsEventComponent } from './details-event/details-event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { FloatingActionButtonComponent } from './floating-action-button/floating-action-button.component'
+import { eventsModuleRoutes } from './events.routes';
 
 export const EventsModule = angular
     .module('app.events',[
@@ -19,4 +20,5 @@ export const EventsModule = angular
     .component('createEvent', CreateEventComponent)
     .component('floatingActionBtn', FloatingActionButtonComponent)
     .service('eventsService', EventsService)
+    .config(eventsModuleRoutes)
     .name;
