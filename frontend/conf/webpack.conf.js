@@ -63,7 +63,7 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.join(process.cwd(), conf.paths.tmp),
-    filename: 'index.js'
+    filename: 'app.js'
   },
-  entry: `./${conf.path.src('index')}`
+  entry: `./${conf.path.src('app/app.module')}`
 };
