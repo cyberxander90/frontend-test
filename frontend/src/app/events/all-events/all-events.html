@@ -1,4 +1,6 @@
 <p>all events from component</p>
 <ul>
-    <li ng-repeat="event in $ctrl.events">{{event.title}}</li>
+    <li ng-repeat="event in $ctrl.events">
+        <card-event event="event"></card-event>
+    </li>
 </ul>
