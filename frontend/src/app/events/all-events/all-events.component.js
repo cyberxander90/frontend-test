@@ -5,8 +5,8 @@ export const AllEventsComponent = {
     },
     controller: class AllEventsComponent{
 
-        constructor(){
-            // ...
+        constructor(screenSize){
+            this.screenSize = screenSize;
         }
     }
 };

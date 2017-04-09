@@ -1,6 +1,6 @@
 <div class="card-event">
     <a ui-sref="events.details-event({id: $ctrl.event.id})">
-        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+        <img ng-src="{{$ctrl.event.eventImage}}" alt="Avatar" style="width:100%">
     </a>
     <a href="" class="card-event-title">{{ $ctrl.event.title }}</a>
     <a href="" class="card-event-date">{{ $ctrl.event.dates[0] }}</a>
