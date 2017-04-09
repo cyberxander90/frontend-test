@@ -1,5 +1,6 @@
 import angular from 'angular';
 import 'angular-ui-router';
+
 import { CommonModule } from './common/common.module';
 import { EventsModule } from './events/events.module';
 

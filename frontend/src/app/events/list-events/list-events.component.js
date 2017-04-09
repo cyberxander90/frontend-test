@@ -1,17 +1,29 @@
 export const ListEventsComponent = {
     template: require('./list-events.html'),
     controller: class ListEventsComponent{
+
+        constructor(eventsService){
+            this.eventsService = eventsService;
+        }
+
         $onInit(){
-            this.events = [
-                {
-                    id: 1,
-                    title: 'mundial de futbol'
-                },
-                {
-                    id: 2,
-                    title: 'Serie del caribe'
-                }
-            ]
+            this.eventsService
+                .getEvents()
+                .then(
+                    events => this.events = events,
+                    (error) => {
+                        console.log(error)
+                    }
+                );
+
+            this.eventsService
+                .getHighLightEvents()
+                .then(
+                    highlights => this.highlights = highlights,
+                    error => {
+                        console.log(error);
+                    }
+                );
         }
     }
 };
