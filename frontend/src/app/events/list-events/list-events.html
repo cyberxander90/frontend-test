@@ -1,9 +1,10 @@
-<p>lister events</p>
-<ul>
-    <li ng-repeat="event in $ctrl.events">{{event.title}}</li>
-</ul>
+<div>
+    1-
+    <all-events events="$ctrl.events"></all-events>
+</div>
 
-<p>highlight events</p>
-<ul>
-    <li ng-repeat="event in $ctrl.highlights">{{event.title}}</li>
-</ul>
+<div>
+    2-
+    <highlight-events events="$ctrl.highlights"></highlight-events>
+</div>
+

@@ -1,12 +1,12 @@
 export const ListEventsComponent = {
     template: require('./list-events.html'),
-    controller: class ListEventsComponent{
+    controller: class ListEventsComponent {
 
-        constructor(eventsService){
+        constructor(eventsService) {
             this.eventsService = eventsService;
         }
 
-        $onInit(){
+        $onInit() {
             this.eventsService
                 .getEvents()
                 .then(
