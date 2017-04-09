@@ -34,4 +34,19 @@ export class EventsService{
                 }
             );
     }
+
+    getEvent(id){
+        return this.$http
+            .get('/data/events.json')
+            .then(
+                response => response.data.find(
+                    (item) => item.id == id
+                ),
+                error => {
+                    // give an error treatment
+                    // ...
+                    return this.$q.reject(error);
+                }
+            )
+    }
 }
