@@ -1,4 +1,4 @@
-export function appRun($rootScope, $state){
+export function appRun($rootScope, $state, $http){
     'ngInject';
 
     // store the previous route name and params, to allow return the previous page
@@ -17,4 +17,7 @@ export function appRun($rootScope, $state){
             $state.go($rootScope.previousStateName, $rootScope.previousStateParams);
         }
     };
+
+    //// allow Access-Control-Allow-Origin
+    //$http.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 }

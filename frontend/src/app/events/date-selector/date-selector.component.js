@@ -3,45 +3,55 @@ import './date-selector.scss';
 export const DateSelectorComponent = {
     template: require('./date-selector.html'),
     bindings: {
-        times: '<',
-        onTimesUpdated: '&'
+        dates: '<',
+        onDatesUpdated: '&',
+        editable: '<'
     },
     controller: class DateSelectorComponent{
 
-        $onInit(){
-            this.newDate = null;
-            this.newPrice = 0;
-            this.times = this.times || [];
+        constructor(moment){
+            this.moment = moment;
         }
 
-        addDateTime(){
-            var newDateTime = moment(this.newDate).toDate();
+        $onInit(){
+            this.newDate = null;
+            this.dates = this.dates || [];
+        }
+
+        // add a new date
+        addDate(){
+            var newDate = this.moment(this.newDate).toDate();
 
             // check if already exist the new dateTime
-            if(this.times.find(item => moment(item.dateTime).isSame(newDateTime))){
+            if(this.existDate(this.newDate)){
                 return;
             }
 
-            this.times.push({
-                dateTime: newDateTime,
-                price: this.newPrice
-            });
+            this.dates.push(this.moment(newDate));
 
-            this.onTimesUpdated({
+            this.onDatesUpdated({
                 $event: {
-                    times: this.times
+                    dates: this.dates
                 }
             });
         }
 
-        removeDateTime(dateTime){
-            this.times.splice(this.times.indexOf(dateTime), 1);
+        removeDate(dateTime){
+            this.dates.splice(this.dates.indexOf(dateTime), 1);
 
-            this.onTimesUpdated({
+            this.onDatesUpdated({
                 $event: {
-                    times: this.times
+                    dates: this.dates
                 }
             });
+        }
+
+        existDate(date){
+            return this.dates.find(item => this.moment(item).isSame(date));
+        }
+
+        canAddNewDate(){
+            return this.newDate && !this.existDate(this.newDate);
         }
     }
 };

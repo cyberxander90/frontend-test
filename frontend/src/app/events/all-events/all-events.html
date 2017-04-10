@@ -1,13 +1,5 @@
-<h2>All Events</h2>
-<div ng-repeat="event in $ctrl.events"  class="row"
-     ng-if="$index % ($ctrl.screenSize == 'md' ? 3 : ($ctrl.screenSize == 'sm' ? 2 : 1)) == 0">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-        <card-event event="$ctrl.events[$index]"></card-event>
-    </div>
-    <div class="col-sm-6 col-md-4 hidden-xs">
-        <card-event event="$ctrl.events[$index + 1]"></card-event>
-    </div>
-    <div class="col-md-4 hide-xs hidden-xs hidden-sm ">
-        <card-event event="$ctrl.events[$index + 2]"></card-event>
+<div class="row">
+    <div ng-repeat="event in $ctrl.events" class="col-xs-12 col-sm-6 col-md-4">
+        <card-event event="event"></card-event>
     </div>
 </div>

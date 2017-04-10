@@ -1,6 +1,6 @@
-export const ListEventsComponent = {
-    template: require('./list-events.html'),
-    controller: class ListEventsComponent {
+export const ListEventsContainerComponent = {
+    template: require('./list-events-container.html'),
+    controller: class ListEventsContainerComponent {
 
         constructor(eventsService, $state, $timeout) {
             'ngInject';

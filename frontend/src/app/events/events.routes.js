@@ -9,11 +9,11 @@ export function eventsModuleRoutes($stateProvider, $urlRouterProvider) {
         })
         .state('events.list-events', {
             url: '/',
-            component: 'listEvents'
+            component: 'listEventsContainer'
         })
         .state('events.details-event', {
             url: '/{id: int}',
-            component: 'detailsEvent'
+            component: 'detailsEventContainer'
         })
         .state('events.create-event', {
             url: '/create',

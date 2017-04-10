@@ -4,7 +4,8 @@ export const ImageSelectorComponent = {
     template: require('./image-selector.html'),
     bindings: {
         imageUrl: '<',
-        onImageUrlUpdated: '&'
+        onImageUrlUpdated: '&',
+        notEditable: '<'
     },
     controller: class ImageSelectorComponent{
 

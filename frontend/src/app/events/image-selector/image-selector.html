@@ -1,6 +1,7 @@
 <ng-form name="imageSelectorForm" class="image-selector">
-    <img class="img-rounded" ng-src="{{$ctrl.imageUrl}}">
+    <img class="img-rounded" ng-src="{{$ctrl.imageUrl}}" ng-src-error>
     <input type="text" class="form-control" name="imageSelectorInput" placeholder="Image"
+           ng-readonly="$ctrl.notEditable"
            ng-model="$ctrl.imageUrl"
            ng-change="$ctrl.changed()"
            ng-model-options="{ debounce: 1000 }">

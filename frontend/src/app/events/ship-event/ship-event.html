@@ -1,0 +1,11 @@
+<a class="ship-event item-card" ui-sref="events.details-event({id: $ctrl.event.id})">
+    <img ng-src="{{ $ctrl.event.eventImage }}"/>
+    <div class="ship-event-details">
+        <span class="ship-event-details-item">
+            <span class="ship-event-title wrap-text">{{ $ctrl.event.title }}</span>
+            <span class="ship-event-date">{{ $ctrl.event.dates[0] | dateFormat : 1 }}</span>
+        </span>
+        <span class="ship-event-details-item ship-event-description wrap-text">{{ $ctrl.event.description }}</span>
+        <span class="ship-event-details-item ship-event-location wrap-text">{{ $ctrl.event.location }}</span>
+    </div>
+</a>

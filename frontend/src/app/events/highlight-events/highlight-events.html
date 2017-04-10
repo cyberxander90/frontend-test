@@ -1,4 +1,6 @@
-<p>highlight events from component</p>
+<h2 class="highlight-lead">Today's Highlight</h2>
 <ul>
-    <li ng-repeat="event in $ctrl.events">{{event.title}}</li>
+    <li ng-repeat="event in $ctrl.events">
+        <ship-event event="event"></ship-event>
+    </li>
 </ul>

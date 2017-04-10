@@ -1,0 +1,14 @@
+<div class="row details-event">
+    <div class="col-sm-8" ng-if="!$ctrl.failedToLoadEvent">
+        <h1>{{ $ctrl.event.title }} <span class="event-details-location">{{ $ctrl.event.location }}</span> </h1>
+        <p class="event-details-description">{{ $ctrl.event.description }}</p>
+    </div>
+    <div class="col-sm-4" ng-if="!$ctrl.failedToLoadEvent">
+        <image-selector image-url="$ctrl.event.eventImage" not-editable="true"></image-selector>
+        <date-selector dates="$ctrl.event.dates" editable="false"></date-selector>
+    </div>
+
+    <div ng-if="$ctrl.failedToLoadEvent">
+        <div class="alert alert-danger" style="margin: 50px;">Failed to load the event</div>
+    </div>
+</div>

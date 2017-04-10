@@ -1,41 +1,36 @@
 <div class="date-selector">
-    <table class="table table-striped table-condensed">
+    <table class="table table-striped table-condensed" ng-if="$ctrl.dates.length">
         <tr>
             <th>Date</th>
             <th>Time</th>
-            <th>Price $</th>
-            <th></th>
+            <th ng-if="$ctrl.editable"></th>
         </tr>
-        <tr ng-repeat="time in $ctrl.times">
+        <tr ng-repeat="dates in $ctrl.dates">
             <td>
-                {{ time.dateTime | getDate }}
+                {{ dates | dateFormat: 4 }}
             </td>
             <td>
-                {{ time.dateTime | getTime }}
+                {{ dates | dateFormat: 5 }}
             </td>
-            <td>
-                {{ time.price }}
-            </td>
-            <td>
-                <a class="btn btn-default btn-sm" ng-click="$ctrl.removeDateTime(time)">
+            <td ng-if="$ctrl.editable">
+                <a class="" ng-click="$ctrl.removeDate(dates)">
                     <i class="fa fa-remove"></i>
                 </a>
             </td>
         </tr>
     </table>
 
-    <div name="dateInputForm" class="form form-inline add-date row">
-        <div class="form-group col-xs-6">
+    <p ng-if="!$ctrl.dates.length" class="non-dates-text">There aren't dates</p>
+
+    <div class="form form-inline add-date row" ng-if="$ctrl.editable">
+        <div class="form-group col-xs-10">
             <input type='text' name="dateTimeInput" class="form-control" id='newDate' placeholder="select date time"
                    required
                    date-time-picker="" />
         </div>
-        <div class="form-group col-xs-4">
-            <input type="number" name="priceInput" class="form-control" placeholder="select price" min="0"
-                   ng-model="$ctrl.newPrice">
-        </div>
         <button class="btn btn-primary btn-sm"
-                ng-click="$ctrl.addDateTime()" ng-disabled="dateInputForm.priceInput.$invalid || !$ctrl.newDate">
+                ng-click="$ctrl.addDate()"
+                ng-disabled="!$ctrl.canAddNewDate()">
             <i class="fa fa-plus"></i>
         </button>
     </div>

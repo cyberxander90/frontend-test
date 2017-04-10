@@ -1,8 +1,7 @@
-<div class="card-event">
-    <a ui-sref="events.details-event({id: $ctrl.event.id})">
-        <img ng-src="{{$ctrl.event.eventImage}}" alt="Avatar" style="width:100%">
-    </a>
-    <a href="" class="card-event-title">{{ $ctrl.event.title }}</a>
-    <a href="" class="card-event-date">{{ $ctrl.event.dates[0] }}</a>
+<a class="card-event item-card" ui-sref="events.details-event({id: $ctrl.event.id})">
+    <img ng-src="{{$ctrl.event.eventImage}}" alt="Avatar" style="width:100%">
+    <span class="card-event-title wrap-text">{{ $ctrl.event.title }}</span>
+    <span class="card-event-date">{{ $ctrl.event.dates[0] | dateFormat : 2 }}</span>
     <btn-share class="card-event-share"></btn-share>
-</div>
+    <div class="water-fall"></div>
+</a>
