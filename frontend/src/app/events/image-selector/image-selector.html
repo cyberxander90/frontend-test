@@ -1,0 +1,7 @@
+<ng-form name="imageSelectorForm" class="image-selector">
+    <img class="img-rounded" ng-src="{{$ctrl.imageUrl}}">
+    <input type="text" class="form-control" name="imageSelectorInput" placeholder="Image"
+           ng-model="$ctrl.imageUrl"
+           ng-change="$ctrl.changed()"
+           ng-model-options="{ debounce: 1000 }">
+</ng-form>

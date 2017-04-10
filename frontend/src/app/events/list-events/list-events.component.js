@@ -2,8 +2,11 @@ export const ListEventsComponent = {
     template: require('./list-events.html'),
     controller: class ListEventsComponent {
 
-        constructor(eventsService) {
+        constructor(eventsService, $state, $timeout) {
+            'ngInject';
             this.eventsService = eventsService;
+            this.$state = $state;
+            this.$timeout = $timeout;
         }
 
         $onInit() {
@@ -24,6 +27,13 @@ export const ListEventsComponent = {
                         console.log(error);
                     }
                 );
+        }
+
+        goToCreateEvent() {
+            this.$timeout(
+                () => {
+                    this.$state.go(this.eventsService.getCreateEventState());
+                });
         }
     }
 };

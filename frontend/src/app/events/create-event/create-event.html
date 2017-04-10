@@ -1,1 +1,36 @@
 <h1>Create-Event</h1>
+<form name="createEvent">
+    <div class="col-sm-8">
+        <div class="form-group">
+            <label for="title" class="sr-only">Title</label>
+            <input type="email" class="form-control" id="title" placeholder="Title"
+                   reqquired ng-minlenght="3"
+                   ng-model="$ctrl.title">
+        </div>
+
+        <div class="form-group">
+            <label for="description" class="sr-only">Description</label>
+            <textarea class="form-control" id="description" placeholder="Description" ng-model="$ctrl.description">
+            </textarea>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+
+        <div class="form-group">
+            <image-selector on-image-url-updated="$ctrl.onImageUrlUpdated($event)"></image-selector>
+        </div>
+
+        <div class="form-group">
+            <label for="location" class="sr-only">Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Location">
+        </div>
+
+        <div class="form-group">
+            <date-selector on-times-updated="$ctrl.onTimesUpdated($event)"></date-selector>
+        </div>
+    </div>
+
+    <floating-action-btn text="create event" fa="fa-save"></floating-action-btn>
+
+</form>

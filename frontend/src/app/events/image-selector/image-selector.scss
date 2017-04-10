@@ -1,0 +1,23 @@
+.image-selector{
+	display: block;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 5px;
+
+	img{
+		height: 300px;
+		max-width: 100%;
+		width: 100%;
+		border-bottom: none;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	input{
+		border-bottom: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		//border-radius: 0;
+	}
+}

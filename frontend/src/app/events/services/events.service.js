@@ -49,4 +49,8 @@ export class EventsService{
                 }
             )
     }
+
+    getCreateEventState(){
+        return 'events.create-event';
+    }
 }

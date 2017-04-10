@@ -1,8 +1,8 @@
 <div class="floating-action-btn">
     <a href="#" class="btn btn-primary"
-       data-toggle="tooltip"
-       title="{{ $ctrl.title }}"
-       ng-disabled="$ctrl.isDisabled">
-        <i class="{{ 'glyphicon ' + $ctrl.glyphicon }}"></i>
+       uib-tooltip="{{ $ctrl.text }}" tooltip-placement="left"
+       ng-disabled="$ctrl.isDisabled"
+       ng-click="$ctrl.onClicked()">
+        <i class="{{ 'fa ' + $ctrl.fa }}"></i>
     </a>
 </div>

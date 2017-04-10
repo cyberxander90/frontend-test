@@ -3,6 +3,11 @@ import 'angular-ui-router';
 import 'angular-ui-bootstrap';
 import 'angular-media-queries';
 
+import 'moment';
+import 'bootstrap/js/transition';
+import 'bootstrap/js/collapse';
+import 'eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min';
+
 import { CommonModule } from './common/common.module';
 import { EventsModule } from './events/events.module';
 
