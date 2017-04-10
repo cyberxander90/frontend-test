@@ -3,16 +3,10 @@ import 'angular-ui-router';
 import 'angular-ui-bootstrap';
 import 'angular-media-queries';
 
-import 'moment';
-import 'bootstrap/js/transition';
-import 'bootstrap/js/collapse';
-import 'eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min';
-
 import { CommonModule } from './common/common.module';
 import { EventsModule } from './events/events.module';
-
-import './app.scss';
 import { AppComponent } from './app.component';
+import { appRun } from './app.run';
 
 export const AppModule = angular
     .module('app', [
@@ -23,4 +17,5 @@ export const AppModule = angular
         EventsModule
     ])
     .component('app', AppComponent)
+    .run(appRun)
     .name;
