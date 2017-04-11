@@ -73,6 +73,7 @@ export class EventsService{
             );
     }
 
+    // todo. the error treatment must be in service's consumers, not here. (this must be resolved for next deploy)
     manageError(error){
         this.toastr.error(error.data || 'Error!!!')
     }
