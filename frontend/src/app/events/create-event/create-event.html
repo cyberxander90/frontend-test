@@ -8,14 +8,15 @@
                 <label for="titleInput" class="sr-only">Title</label>
                 <input type="text" name="titleInput" class="form-control input-lg" id="titleInput" placeholder="Title"
                        required
-                       ng-minlenght="3"
+                       ng-class="{'has-errors': $ctrl.showErrors && createEvent.titleInput.$invalid}"
                        ng-model="$ctrl.title">
-                title: {{ $ctrl.title }}
             </div>
 
             <div class="form-group">
                 <label for="descriptionInput" class="sr-only">Description</label>
                 <textarea class="form-control input-lg" rows="15" name="descriptionInput" id="descriptionInput" placeholder="Description"
+                          required
+                          ng-class="{'has-errors': $ctrl.showErrors && createEvent.descriptionInput.$invalid}"
                           ng-model="$ctrl.description">
                 </textarea>
             </div>
@@ -24,22 +25,31 @@
         <div class="col-sm-4">
 
             <div class="form-group">
-                <image-selector on-image-url-updated="$ctrl.onImageUrlUpdated($event)"></image-selector>
+                <image-selector on-image-url-updated="$ctrl.onImageUrlUpdated($event)"
+                                ng-class="{'has-errors': $ctrl.showErrors && (!$ctrl.imageUrl || !$ctrl.isValidImageUrl)}">
+                </image-selector>
             </div>
 
             <div class="form-group">
                 <label for="locationInput" class="sr-only">Location</label>
                 <input type="text" name="locationInput" class="form-control input-lg" id="locationInput" placeholder="Location"
+                       required
+                       ng-class="{'has-errors': $ctrl.showErrors && createEvent.locationInput.$invalid}"
                        ng-model="$ctrl.location">
             </div>
 
             <div class="form-group">
-                <date-selector on-dates-updated="$ctrl.onDatesUpdated($event)" editable="true"></date-selector>
+                <date-selector on-dates-updated="$ctrl.onDatesUpdated($event)"
+                               editable="true"
+                               ng-class="{'has-errors': $ctrl.showErrors && !$ctrl.dates.length}"></date-selector>
             </div>
         </div>
 
-        <floating-action-btn text="create event"
+        <floating-action-btn text="save"
                              fa="fa-save"
+                             is-disabled="$ctrl.isSaving || ($ctrl.showErrors &&
+                             (createEvent.titleInput.$invalid || createEvent.descriptionInput.$invalid ||
+                             !$ctrl.imageUrl || !$ctrl.isValidImageUrl || createEvent.locationInput.$invalid || !$ctrl.dates.length))"
                              on-clicked="$ctrl.createEvent()"></floating-action-btn>
 
     </form>

@@ -6,7 +6,6 @@ export const AllEventsComponent = {
     controller: class AllEventsComponent{
 
         constructor(screenSize){
-            'ngInject';
 
             this.screenSize = screenSize;
         }

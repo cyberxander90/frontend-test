@@ -3,7 +3,6 @@ export const ListEventsContainerComponent = {
     controller: class ListEventsContainerComponent {
 
         constructor(eventsService, $state, $timeout) {
-            'ngInject';
             this.eventsService = eventsService;
             this.$state = $state;
             this.$timeout = $timeout;

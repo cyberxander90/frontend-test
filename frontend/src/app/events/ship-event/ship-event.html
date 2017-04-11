@@ -1,5 +1,5 @@
 <a class="ship-event item-card" ui-sref="events.details-event({id: $ctrl.event.id})">
-    <img ng-src="{{ $ctrl.event.eventImage }}"/>
+    <img ng-src="{{ $ctrl.event.eventImage }}" ng-src-error/>
     <div class="ship-event-details">
         <span class="ship-event-details-item">
             <span class="ship-event-title wrap-text">{{ $ctrl.event.title }}</span>

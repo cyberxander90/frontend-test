@@ -1,5 +1,4 @@
 export function dateTimePickerDirective($timeout) {
-    'ngInject';
 
     return {
         restrict: 'A',

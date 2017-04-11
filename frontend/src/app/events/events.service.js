@@ -1,7 +1,6 @@
 export class EventsService{
 
     constructor($http, $q, API_ROOT, toastr){
-        'ngInject';
 
         this.$http = $http;
         this.$q = $q;

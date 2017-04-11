@@ -1,5 +1,4 @@
 export function eventsModuleRoutes($stateProvider, $urlRouterProvider) {
-    'ngInject';
 
     $stateProvider
         .state('events', {

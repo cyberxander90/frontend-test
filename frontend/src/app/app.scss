@@ -6,9 +6,9 @@ a{
 	cursor: pointer;
 }
 
-.has-error{
-	border-color: red;
-	border-width: 3px;
+.has-errors{
+	border: 3px solid red !important;
+	outline: none;
 }
 
 ul{
@@ -47,4 +47,10 @@ section.main-content{
 textarea{
 	max-width: 100%;
 	max-height: 100%;
+}
+
+.navbar-brand{
+	font-size: 30px;
+	color: white;
+	padding-left: 80px;
 }

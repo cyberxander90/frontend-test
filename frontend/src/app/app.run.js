@@ -1,5 +1,4 @@
 export function appRun($rootScope, $state, $http){
-    'ngInject';
 
     // store the previous route name and params, to allow return the previous page
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {

@@ -1,5 +1,4 @@
 export function ngSrcErrorDirective(DEFAULT_EMPTY_IMAGE, $timeout){
-    'ngInject';
 
     return {
         link: function(scope, elem, attrs) {
