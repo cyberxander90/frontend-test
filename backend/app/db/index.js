@@ -25,6 +25,7 @@ function finById (id) {
 }
 
 function create (event) {
+  console.log(event);
   event.id = lastId() + 1;
   var jsonEvent = JSON.stringify(event);
   fs.writeFileSync(path.join(eventsDir, event.id + '.json'), jsonEvent);
