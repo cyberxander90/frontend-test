@@ -12,7 +12,6 @@ export const AppModule = angular
     .module('app', [
         'ui.router',
         'ui.bootstrap',
-        'matchMedia',
         CommonModule,
         EventsModule
     ])
