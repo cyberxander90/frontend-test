@@ -1,0 +1,19 @@
+header navbar{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+}
+
+.navbar-header{
+	padding-left: 80px;
+}
+
+.navbar-brand{
+	font-size: 30px;
+	color: white;
+}
+
+.navbar-brand-go-back{
+	font-size: 15px;
+}

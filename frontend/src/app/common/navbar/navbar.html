@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand fa fa-backward"
-               ng-click="$ctrl.$rootscope.back()"
-               ng-if=$ctrl.$rootscope.previousStateName></a>
+            <a class="navbar-brand navbar-brand-go-back fa fa-backward"
+               ui-sref="{{$ctrl.HOME_STATE}}"
+               ng-if=$ctrl.goHome></a>
             <a class="navbar-brand" href="#">Events</a>
         </div>
     </div>
