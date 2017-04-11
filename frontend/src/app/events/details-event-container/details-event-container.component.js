@@ -16,7 +16,6 @@ export const DetailsEventContainerComponent = {
                 .then(
                     event => {
                         this.event = event;
-                        console.log(event)
                     },
                     error => {
                         console.log(error);

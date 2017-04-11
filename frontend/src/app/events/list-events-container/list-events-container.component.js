@@ -31,7 +31,7 @@ export const ListEventsContainerComponent = {
         goToCreateEvent() {
             this.$timeout(
                 () => {
-                    this.$state.go(this.eventsService.getCreateEventState());
+                    this.$state.go('events.create-event');
                 });
         }
     }

@@ -16,7 +16,7 @@ export function eventsModuleRoutes($stateProvider, $urlRouterProvider) {
         })
         .state('events.create-event', {
             url: '/create',
-            component: 'createEvent'
+            component: 'createEventContainer'
         });
 
     $urlRouterProvider.otherwise('/events/');

@@ -14,7 +14,6 @@ export class EventsService{
             .get(this.API_ROOT +  '/events')
             .then(
                 response => {
-                    console.log(response);
                     return response.data.events
                 },
                 error => {
@@ -30,7 +29,6 @@ export class EventsService{
             .get(this.API_ROOT +  '/events/featured')
             .then(
                 response => {
-                    console.log(response);
                     return response.data.events
                 },
                 error => {
@@ -46,7 +44,6 @@ export class EventsService{
             .get(this.API_ROOT +  '/events/' + id)
             .then(
                 response => {
-                    console.log(response);
                     return response.data.event;
                 },
                 error => {
@@ -67,7 +64,6 @@ export class EventsService{
             })
             .then(
                 response => {
-                    console.log(response);
                     return response.data.event;
                 },
                 error => {
@@ -75,10 +71,6 @@ export class EventsService{
                     return this.$q.reject(error);
                 }
             );
-    }
-
-    getCreateEventState(){
-        return 'events.create-event';
     }
 
     manageError(error){

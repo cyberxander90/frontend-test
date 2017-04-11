@@ -5,7 +5,7 @@ import { EventsService } from './events.service';
 import { AllEventsComponent } from './all-events/all-events.component';
 import { HighlightEventsComponent } from './highlight-events/highlight-events.component';
 import { DetailsEventContainerComponent } from './details-event-container/details-event-container.component';
-import { CreateEventComponent } from './create-event/create-event.component';
+import { CreateEventContainerComponent } from './create-event-container/create-event-container.component';
 import { FloatingActionButtonComponent } from './floating-action-button/floating-action-button.component'
 import { CardEventComponent } from './card-event/card-event.component';
 import { BtnShareComponent } from './btn-share/btn-share.component';
@@ -25,7 +25,7 @@ export const EventsModule = angular
     .component('allEvents', AllEventsComponent)
     .component('highlightEvents', HighlightEventsComponent)
     .component('detailsEventContainer', DetailsEventContainerComponent)
-    .component('createEvent', CreateEventComponent)
+    .component('createEventContainer', CreateEventContainerComponent)
     .component('floatingActionBtn', FloatingActionButtonComponent)
     .component('cardEvent', CardEventComponent)
     .component('btnShare', BtnShareComponent)

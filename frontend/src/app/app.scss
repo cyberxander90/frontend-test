@@ -1,5 +1,6 @@
 body {
 	background-color: lightgrey;
+	font-family: 'Roboto', sans-serif;
 }
 
 a{
@@ -9,6 +10,10 @@ a{
 .has-errors{
 	border: 3px solid red !important;
 	outline: none;
+
+	-webkit-box-shadow: 2px 1px 29px -5px rgba(245,0,0,1);
+	-moz-box-shadow: 2px 1px 29px -5px rgba(245,0,0,1);
+	box-shadow: 2px 1px 29px -5px rgba(245,0,0,1);
 }
 
 ul{

@@ -13,9 +13,7 @@ export const NavbarComponent = {
 
         $onInit(){
             this.$transitions.onSuccess({}, () => {
-                console.log('SUCCESS')
                 this.goHome = this.$state.current.name != this.HOME_STATE;
-                console.log(this.goHome)
             });
         }
     }

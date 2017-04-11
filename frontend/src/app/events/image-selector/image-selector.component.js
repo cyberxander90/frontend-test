@@ -19,7 +19,7 @@ export const ImageSelectorComponent = {
         }
 
         isValidUrl(url){
-            // todo
+            // todo. this must validate the url
             return true;
         }
     }
